@@ -1,0 +1,9 @@
+# Historial y metadatos del repositorio
+.git
+
+# Bytecode compilado de Python
+__pycache__
+*.pyc
+
+# Cache de pytest
+.pytest_cache

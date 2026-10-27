@@ -1,0 +1,61 @@
+{
+  "enums": {
+    "RoomType": ["single", "double", "suite"],
+    "BASE_RATES": {
+      "single": "50.00",
+      "double": "80.00",
+      "suite": "150.00"
+    },
+    "ROOM_CAPACITY": {
+      "single": 1,
+      "double": 2,
+      "suite": 4
+    }
+  },
+  "exports": {
+    "src/booking.py": [
+      "RoomType",
+      "MONEY_QUANTUM",
+      "MAX_NIGHTS",
+      "WEEKEND_SURCHARGE",
+      "TOURIST_TAX_PER_GUEST_PER_NIGHT",
+      "LONG_STAY_NIGHTS",
+      "LONG_STAY_DISCOUNT",
+      "BASE_RATES",
+      "ROOM_CAPACITY",
+      "WEEKEND_WEEKDAYS",
+      "nights",
+      "nightly_rate",
+      "stay_total"
+    ],
+    "pytest.ini": [],
+    "requirements-dev.txt": [],
+    "Dockerfile": [],
+    "tests/test_booking.py": [
+      "test_reference_example",
+      "test_weekend_surcharge",
+      "test_long_stay_discount",
+      "test_no_discount_under_seven_nights",
+      "test_discount_excludes_tourist_tax",
+      "test_max_stay_limit",
+      "test_nights_count",
+      "test_nights_type_errors",
+      "test_nights_value_errors",
+      "test_unknown_room_raises",
+      "test_guests_validation",
+      "test_rates_have_two_decimals"
+    ],
+    "docker-compose.yml": [],
+    ".env.example": [],
+    ".gitignore": [],
+    ".dockerignore": [],
+    "README.md": [],
+    "run.sh": [
+      "mostrar_ayuda",
+      "detectar_compose",
+      "ejecutar_host",
+      "ejecutar_docker"
+    ],
+    "END_TO_END_REPORT.md": []
+  }
+}

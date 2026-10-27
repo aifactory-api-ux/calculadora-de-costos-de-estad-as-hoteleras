@@ -1,0 +1,12 @@
+# Bytecode compilado de Python
+__pycache__/
+*.pyc
+
+# Cache de pytest
+.pytest_cache/
+
+# Entornos virtuales locales
+.venv/
+
+# Variables de entorno locales (no hay secretos en el repositorio)
+.env

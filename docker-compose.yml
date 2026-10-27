@@ -1,0 +1,22 @@
+# Orquestación local de la librería de cálculo de estadías hoteleras.
+#
+# Servicio único `booking-lib`: construye la imagen de verificación y ejecuta
+# la suite de pruebas. El contenedor propaga el código de salida de pytest y
+# termina.
+#
+# El servicio no publica `ports:` porque la librería no expone ningún
+# listener, y no declara `depends_on` porque no hay servicios de apoyo.
+#
+# El servicio es *one-shot*: corre la suite y termina. Por eso no declara
+# `healthcheck:` (un healthcheck solo puede evaluarse mientras el contenedor
+# sigue vivo) y su señal de aceptación es el código de salida 0 del
+# contenedor, que `docker compose up --abort-on-container-exit` propaga.
+#
+# Uso: docker compose up --build --abort-on-container-exit
+
+services:
+  booking-lib:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: ["python", "-m", "pytest", "-v"]
